@@ -2,6 +2,7 @@
 
 //모듈
 const express = require("express");
+const bodyParser = require("body-parser")
 const app = express();
 const PORT = 3000;
 
@@ -15,6 +16,4 @@ app.set("view engine","ejs");
 
 app.use('/',home); // use->미들웨어를 등록해주는 메서드.
 
-app.listen(PORT, ()=> {
-    console.log('서버가동')
-});
+module.exports = app;
